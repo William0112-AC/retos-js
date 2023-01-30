@@ -1,15 +1,11 @@
-function wrapping(gifts) {
-    const giftsWrapped = [];
-    for (let i = 0; i < gifts.length; i++) {
-        console.log(gifts[i]);
-        
-        giftsWrapped.push(`${ gifts[i] }`)      
-     
-    }
-    return giftsWrapped;
-
+function wrapping (gifts) {
+    gifts.map(gifts =>{
+        const papel = "*".repeat(gifts.length + 2)
+        return papel + "\n" + "*" + gifts + "*" + "\n" + papel
+    })
 }
-const gifts = ['cat', 'game', 'socks'];
-const wrapped = wrapping(gifts);
-
-console.log(wrapped);
+    // *****
+    // *cat*
+    // *****
+    wrapping(['cat', 'game', 'socks'])
+    module.exports = wrapping;
